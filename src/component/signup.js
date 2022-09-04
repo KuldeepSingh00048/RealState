@@ -21,7 +21,7 @@ const signup = ({visible,onClose}) => {
         <input type="email" className='my-3 border-2 rounded-lg border-black p-1 text-indigo-600 font-semibold' placeholder="Renter your Password"
         name='email'/>
         <br />
-        <button className='bg-gradient-to-r from-green-500 to-lime-500 w-auto text-lg px-2 rounded-lg font-bold hover:text-base active:bg-yellow-300' >Sign In</button>
+        <button className='bg-gradient-to-r from-green-500 to-lime-500 w-auto text-lg px-2 rounded-lg font-bold hover:text-base active:bg-yellow-300' >Sign Up</button>
     </div>  
     <div onClick={onClose} className='border-2 border-black float-right text-xl h-6 w-7 pb-7 bg-indigo-700 hover:text-base active:bg-indigo-400 rounded-lg cursor-pointer  mb-auto mr-2 mt-2'>X</div>
   </div>
