@@ -9,10 +9,10 @@ const signin = ({ visible, onClose }) => {
       <div className=' flex-col flex-wrap w-96 bg-gradient-to-r from-indigo-500 to-violet-500 h-auto rounded-2xl'>
         <h1 className='my-1 text-4xl font-bold'> Sign In</h1>
 
-        <input type="text" className='my-3 border-2 rounded-lg border-black p-1  w-auto text-indigo-600 font-semibold' placeholder="Enter your name"
+        <input type="text" className='my-3 border-2 rounded-lg border-black p-1  w-auto text-indigo-600 font-semibold' placeholder="UserName"
           name='name' />
         <br />
-        <input type="email" className='my-3 border-2 rounded-lg border-black p-1 w-auto text-indigo-600 font-semibold' placeholder="Renter your Password"
+        <input type="email" className='my-3 border-2 rounded-lg border-black p-1 w-auto text-indigo-600 font-semibold' placeholder="Password"
           name='email' />
         <br />
         <button className='bg-gradient-to-r from-green-500 to-lime-500 w-auto text-lg px-2 rounded-lg font-bold hover:text-base active:bg-yellow-300 mb-2 ' >Sign In</button>

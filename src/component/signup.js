@@ -9,7 +9,7 @@ const signup = ({ visible, onClose }) => {
       <div className=' flex-col rounded-xl flex-wrap w-96  h-auto bg-gradient-to-r from-indigo-500 to-purple-500 '>
         <h1 className='my-1 text-4xl font-bold'> Sign Up</h1>
 
-        <input type="text" className='my-3 border-2 rounded-lg border-black p-1 text-indigo-600 font-semibold' placeholder="Enter your name"
+        <input type="text" className='my-3 border-2 rounded-lg border-black p-1 text-indigo-600 font-semibold' placeholder="Enter your UserName"
           name='name' />
         <br />
         <input type="text" className='my-3 border-2 rounded-lg border-black p-1 text-indigo-600 font-semibold' placeholder="Enter your E-mail"
