@@ -9,7 +9,7 @@ import { AiOutlineAreaChart } from "react-icons/ai";
 import HData from './housedata.js';
 const Rent = () => {
   const [items, setItems] = useState(HData);
-  const [house,setHouse] = useState(HData)
+  const [house,setHouse] = useState()
   const filterRent = (rent) => {
     const data = HData.filter((curdata) => {
       return curdata.hrtype === rent || curdata.allrent===rent;
