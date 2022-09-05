@@ -9,7 +9,7 @@ const about = () => {
           <br />
           <div className='px-2 text-base text-violet-600 font-semibold font-verdana'>
             having our duty to get the best sale price while assisting a property seller. On the other hand,
-            we are responsible for negotiate and get the lowest quote when  client is a property buyer
+            we are responsible for negotiate and get the lowest quote when  client is a property buyer.
           </div>
         </div>
         <img className=' mx-10 h-80 w-96 my-7 rounded-xl' src={About} />

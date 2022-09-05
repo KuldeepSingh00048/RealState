@@ -29,7 +29,7 @@ const Buy = () => {
   function Search() {
     // window.alert('hello')
     setItems(house)
-    const type='Rs.---'
+    const type = 'Rs.---'
     filterType(type)
     // setItems=house
   }
@@ -37,7 +37,7 @@ const Buy = () => {
   return (
     <>
       <nav className='flex-col justify-center text-center p-2 font-extrabold text-4xl'>
-        <h2 className=' font-comic  font-semibold'>Search Property Buy</h2>
+        <h2 className=' font-comic  font-semibold'>Search Property to Buy</h2>
         <section className=' p-3 justify-center  '>
           <ul className='bg-white flex flex-wrap w-fit rounded-xl  mx-auto p-auto mt-4 '>
             <li className=' flex-col mx-2 px-4 text-center justify-center border-r-2  '>

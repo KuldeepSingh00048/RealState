@@ -9,23 +9,23 @@ import { AiOutlineAreaChart } from "react-icons/ai";
 import HData from './housedata.js';
 const Rent = () => {
   const [items, setItems] = useState(HData);
-  const [house,setHouse] = useState()
+  const [house, setHouse] = useState()
   const filterRent = (rent) => {
     const data = HData.filter((curdata) => {
-      return curdata.hrtype === rent || curdata.allrent===rent;
+      return curdata.hrtype === rent || curdata.allrent === rent;
     });
     setHouse(data)
     // setItems(data)
   }
 
- const filterType = (type) => {
+  const filterType = (type) => {
     const data = house.filter((curdata) => {
-      return curdata.htype === type || curdata.alltype===type;
+      return curdata.htype === type || curdata.alltype === type;
     });
     setHouse(data)
     // setItems(data)
   }
-  function Search(){
+  function Search() {
     // window.alert('hello')
     setItems(house)
     // setItems=house
@@ -34,7 +34,7 @@ const Rent = () => {
   return (
     <>
       <nav className='flex-col justify-center text-center p-2 font-extrabold text-4xl'>
-        <h2 className=' font-comic  font-semibold'>Search Property Rent</h2>
+        <h2 className=' font-comic  font-semibold'>Search Property for Rent</h2>
         <section className=' p-3 justify-center  '>
           <ul className='bg-white flex flex-wrap w-fit rounded-xl  mx-auto p-auto mt-4 '>
             <li className=' flex-col mx-2 px-4 text-center justify-center border-r-2  '>
