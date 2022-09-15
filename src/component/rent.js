@@ -9,26 +9,15 @@ import { AiOutlineAreaChart } from "react-icons/ai";
 import HData from './housedata.js';
 const Rent = () => {
   const [items, setItems] = useState(HData);
-  const [house, setHouse] = useState()
-  const filterRent = (rent) => {
-    const data = HData.filter((curdata) => {
-      return curdata.hrtype === rent || curdata.allrent === rent;
-    });
-    setHouse(data)
-    // setItems(data)
-  }
+  const [housetype, setHousetype] = useState('ALL')
+  const [renttype, setrenttype] = useState('ALL')
 
-  const filterType = (type) => {
-    const data = house.filter((curdata) => {
-      return curdata.htype === type || curdata.alltype === type;
-    });
-    setHouse(data)
-    // setItems(data)
-  }
   function Search() {
-    // window.alert('hello')
-    setItems(house)
-    // setItems=house
+    const data = HData.filter((curdata) => {
+      return ((((curdata.htype === housetype)||(curdata.alltype === housetype)) && ((curdata.hrtype === renttype)||(curdata.alltype === renttype)))||(curdata.alltype === housetype && curdata.allrent === renttype));
+    });
+    // setHouse(data)
+    setItems(data)
   }
 
   return (
@@ -53,11 +42,10 @@ const Rent = () => {
               <div className='flex text-base font-normal mr-12 '><FcMoneyTransfer className=' mx-auto h-8 w-7' />Price</div>
               <select name='Rs.---' className=' font-extrabold  text-sm  float-right border-b-purple-900 border-b-2 rounded-xl hover:border-b-black text-purple-900 hover:text-black '
                 onChange={(e) => {
-                  const rent = e.target.value
-                  filterRent(rent)
+                  setrenttype(e.target.value)
                 }}>
                 <option disabled selected className='text-sm w-auto text-black font-bold '>Rs.---</option>
-                <option value='All' className='text-sm text-left text-black font-bold  '>All</option>
+                <option   value='All' className='text-sm text-left text-black font-bold  '>All</option>
                 <option value='Rs.8 K - Rs.10 K' className='text-sm text-left text-black font-bold  '>Rs.8 K - Rs.10 K</option>
                 <option value='Rs.10 K - Rs.18 K' className='text-sm text-left text-black font-bold  '>Rs.10 K - Rs.18 K</option>
                 <option value='Rs.18 K - Rs.25 K' className='text-sm text-left text-black font-bold  '>Rs.18 K - Rs.25 K</option>
@@ -68,12 +56,11 @@ const Rent = () => {
               <div className='flex text-base font-normal mr-12 '><GoHome className=' mr-2 mb-1 h-7 w-7' />Property Type</div>
               <select name='Property Type' className=' font-extrabold  text-sm  float-right border-b-purple-900 mr-12 border-b-2 rounded-xl hover:border-b-black text-purple-900 hover:text-black '
                 onChange={(e) => {
-                  const type = e.target.value
-                  filterType(type)
+                  setHousetype(e.target.value)
                 }}
               >
                 <option disabled selected className='text-sm w-auto text-black font-bold '>Property Type</option>
-                <option value='All' className='text-sm text-left text-black font-bold  '>All</option>
+                <option  value='All' className='text-sm text-left text-black font-bold  '>All</option>
                 <option value='1-BHK' className='text-sm text-left text-black font-bold  '>1-BHK</option>
                 <option value='2-BHK' className='text-sm text-left text-black font-bold  '>2-BHK</option>
                 <option value='3-BHK' className='text-sm text-left text-black font-bold  '>3-BHK</option>

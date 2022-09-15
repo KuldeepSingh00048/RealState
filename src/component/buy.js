@@ -9,29 +9,15 @@ import { AiOutlineAreaChart } from "react-icons/ai";
 import HData from './housedata.js';
 const Buy = () => {
   const [items, setItems] = useState(HData);
-  const [house, setHouse] = useState(HData);
+  const [housetype, setHousetype] = useState()
+  const [price, setprice] = useState()
 
-  const filterRent = (price) => {
-    const data = HData.filter((curdata) => {
-      return curdata.hptype === price || curdata.allprice === price;
-    });
-    setHouse(data)
-    // setItems(data)
-  }
-
-  const filterType = (type) => {
-    const data = house.filter((curdata) => {
-      return curdata.htype === type || curdata.alltype === type;
-    });
-    setHouse(data)
-    // setItems(data)
-  }
   function Search() {
-    // window.alert('hello')
-    setItems(house)
-    const type = 'Rs.---'
-    filterType(type)
-    // setItems=house
+    const data = HData.filter((curdata) => {
+      return ((((curdata.htype === housetype)||(curdata.alltype === housetype)) && ((curdata.hptype === price)||(curdata.alltype === price)))||(curdata.alltype === housetype && curdata.allrent === price));
+    });
+    // setHouse(data)
+    setItems(data)
   }
 
   return (
@@ -56,8 +42,8 @@ const Buy = () => {
               <div className='flex text-base font-normal mr-12 '><FcMoneyTransfer className=' mx-auto h-8 w-7' />Price</div>
               <select name='Rs.---' className=' font-extrabold  text-sm  float-right border-b-purple-900 border-b-2 rounded-xl hover:border-b-black text-purple-900 hover:text-black '
                 onChange={(e) => {
-                  const price = e.target.value
-                  filterRent(price)
+                  setprice(e.target.value)
+                
                 }}
               >
                 <option disabled selected className='text-sm w-auto text-black font-bold '>Rs.---</option>
@@ -72,8 +58,7 @@ const Buy = () => {
               <div className='flex text-base font-normal mr-12 '><GoHome className=' mr-2 mb-1 h-7 w-7' />Property Type</div>
               <select name='Property Type' className=' font-extrabold  text-sm  float-right border-b-purple-900 mr-12 border-b-2 rounded-xl hover:border-b-black text-purple-900 hover:text-black '
                 onChange={(e) => {
-                  const type = e.target.value
-                  filterType(type)
+                  setHousetype(e.target.value)
                 }}
               >
                 <option disabled selected className='text-sm w-auto text-black font-bold '>Property Type</option>
