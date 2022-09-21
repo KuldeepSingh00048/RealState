@@ -22,7 +22,7 @@ const App = () => {
           </Routes>
         </div>
         <footer className=' mt-2 h-auto'>
-          <div className='text-center text-sm text-gray-50'>Copyright © 2nd Sept, 2022 Kuldeep Singh &nbsp; &nbsp; &nbsp;&nbsp; | &nbsp;  <a className='text-sky-800 cursor-pointer font-bold' target="_blank" href='https://www.reunionhq.in/'>&nbsp;Reunion</a>  &nbsp;|&nbsp; &nbsp; &nbsp;   
+          <div className='text-center text-sm text-gray-50'>Copyright © 2nd Sept, 2022 Kuldeep Singh &nbsp; | &nbsp;   
           Edit this page on <a className='text-sky-800 font-bold cursor-pointer' target="_blank" href='https://github.com/KuldeepSingh00048/RealState'>&nbsp;GitHub</a></div>
         </footer>
       </div>
